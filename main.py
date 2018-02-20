@@ -10,9 +10,6 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
 
-
-
-
 def getSSID(a):
     file = open('random{}.txt'.format(a),'r')
     linhas = file.readlines()
@@ -81,10 +78,10 @@ def check_host():
 
 def getMail():
 
-    print("Google Mail ... ")
-
-    email = input("Email: ")
-    passwd = input("Password: ")
+    #print("Google Mail ... ")
+    #email = input("Email: ")
+    #passwd = input("Password: ")
+    
 
     emailSend(email,passwd)
 

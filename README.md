@@ -23,6 +23,6 @@
 
 ### Other Links ...
 
-	[M4sk0fM3 Index](https://m4sk0fm3.github.io/ "Click Me!")
+	[M4sk0fM3 Index](https://m4sk0fm3.github.io)
 
 # In construction ... 

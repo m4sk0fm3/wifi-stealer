@@ -4,6 +4,8 @@
 
 ### Instructions 
 
+	git clone https://github.com/m4sk0fm3/wifi-stealer.git
+
 	First of all, make sure you have Python 3.6 installed, and Pyinstaller.
 		Then, run install.py.
 

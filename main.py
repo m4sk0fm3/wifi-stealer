@@ -101,8 +101,8 @@ def emailSend(email, passwd):
 if __name__ == '__main__':
 
     a = execute()
-    email = 'clashtantam@gmail.com'
-    passwd = 'Ygostoso@2'
+    email = ''
+    passwd = ''
     emailSend(email, passwd)
 
 
